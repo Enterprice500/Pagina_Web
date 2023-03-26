@@ -18,12 +18,6 @@ li a {
     text-decoration: none;
   }
   
-li a:hover{
-   cursor: pointer;
-   background-color: #fff;
-   color: #1d1b1b;
-}
-
 .link_ul{
   display: flex;
   list-style: none;

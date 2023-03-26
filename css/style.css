@@ -16,9 +16,12 @@ li a {
     padding: 15px 15px;
     display: block;
     margin-left: 20px;
+
   }
-li a:hover{
+  
+li a:hover:visited{
    cursor: pointer;
    background-color: #fff;
    color: #1d1b1b;
-}
+   text-decoration: none;
+  }

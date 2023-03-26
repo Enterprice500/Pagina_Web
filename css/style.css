@@ -1,11 +1,9 @@
-nav {
-    background-color: #1d1b1b;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  ul {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
     display: flex;
     list-style: none;
     margin: 0;
@@ -23,10 +21,26 @@ li a:hover{
    cursor: pointer;
    background-color: #fff;
    color: #1d1b1b;
+
   }
 .Description_page{
   margin-left: 550px ;
 }
 .Description_tools{
   margin-left: 680px;
+}
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1b1b;
+    color: #fff;
+    padding: 10px;
+}
+.logo{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+>>>>>>> a93986f68b12fbf89de59174f774bcef9679a033
 }

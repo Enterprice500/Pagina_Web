@@ -1,47 +1,65 @@
-body{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+/* ---- reset ---- */
+body {
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    width: 100vw;
+    height: 100vh;
 }
 
-.loginBox{
-    position: absolute;
+/* ---- particles.js container ---- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0b0909;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+/* ---- login ---- */
+.loginBox {
+    position: relative;
+    z-index: 99;
     top: 50%;
     left: 50%;
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .5);
+    background: rgba(93, 90, 90, 0.915);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-shadow: 0 15px 25px rgba(90, 80, 80, 0.914);
     border-radius: 10px;
 }
 
-.loginBox h2{
+.loginBox h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
 }
 
-.loginBox .userBox{
+.loginBox .userBox {
     position: relative;
 }
 
-.loginBox .userBox input{
+.loginBox .userBox input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: #0b0909; /*de las letras que se van a escribir*/
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #fff; /* linea bajo las letras que se van a escribir*/
     outline: none;
     background: transparent;
 }
 
-.loginBox .userBox label{
+.loginBox .userBox label {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,19 +69,20 @@ body{
     pointer-events: none;
     transition: .5s;
 }
-.loginBox .userBox input:focus ~ label,
-.loginBox .userBox input:valid ~ label{
+
+.loginBox .userBox input:focus~label,
+.loginBox .userBox input:valid~label {
     top: -20px;
     left: 0;
-    color: #03a9f4;
+    color: #0b0909;/*letras que estan escritar donde se van a escribir*/
     font-size: 12px;
 }
 
-.loginBox form a{
+.loginBox form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03a9f4;
+    color: #f7f7f7;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -72,88 +91,102 @@ body{
     margin-top: 40px;
     letter-spacing: 4px
 }
-.loginBox a:hover{
-    background: #03a9f4;
+
+.loginBox a:hover {
+    background: #0b0909;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03a9f4,
-                0 0 25px #03a9f4,
-                0 0 50px #03a9f4,
-                0 0 100px #03a9f4;
+    box-shadow: 0 0 5px #0b0909,
+        0 0 25px #0b0909,
+        0 0 50px #0b0909,
+        0 0 100px #0b0909;
 }
-.loginBox a span{
+
+.loginBox a span {
     position: absolute;
     display: block;
 }
-.loginBox a span:nth-child(1){
+
+.loginBox a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03a9f4);
-    /*animation: btn1 1s linear infinite;*/
+    background: linear-gradient(90deg, transparent, #0b0909);
     animation: btn-anim1 1s linear infinite;
 }
-@keyframes btn-anim1{
-    0%{
+
+@keyframes btn-anim1 {
+    0% {
         left: -100%;
     }
-    50%, 100%{
+
+    50%,
+    100% {
         left: 100%;
     }
 }
-.loginBox a span:nth-child(2){
+
+.loginBox a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03a9f4);
-    /*animation: btn2 1s linear infinite;*/
+    background: linear-gradient(180deg, transparent, #0b0909);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
 }
-@keyframes btn-anim2{
-    0%{
+
+@keyframes btn-anim2 {
+    0% {
         top: -100%;
     }
-    50%, 100%{
+
+    50%,
+    100% {
         top: 100%;
     }
 }
-.loginBox a span:nth-child(3){
+
+.loginBox a span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03a9f4);
+    background: linear-gradient(270deg, transparent, #0b0909);
     /*animation: btn3 1s linear infinite;*/
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
 }
-@keyframes btn-anim3{
-    0%{
+
+@keyframes btn-anim3 {
+    0% {
         right: -100%;
     }
-    50%, 100%{
+
+    50%,
+    100% {
         right: 100%;
     }
 }
 
-.loginBox a span:nth-child(4){
+.loginBox a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03a9f4);
-    /*animation: btn4 1s linear infinite;*/
+    background: linear-gradient(360deg, transparent, #0b0909);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
 }
-@keyframes btn-anim4{
-    0%{
+
+@keyframes btn-anim4 {
+    0% {
         bottom: -100%;
     }
-    50%, 100%{
+
+    50%,
+    100% {
         bottom: 100%;
     }
 }

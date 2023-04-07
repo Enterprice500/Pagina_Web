@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/css/img/logo.ico">
-    <title>Web</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffff">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/css/img/logo.ico">
+  <title>Web</title>
 </head>
+
 <body>
+  <header>
     <div class="navegacion">
-        <img class="logo" src="/css/img/logo.ico" alt="logo">
+      <div class="menu">
+        <input type="checkbox" id="check__menu">
+        <label id="label__check" for="check__menu">
+          <i class ="fas fa-bars icon__menu"></i>
+        </label>
         <nav>
           <ul class="link_ul">
-            <li class="link_li"><a class="link_op" >Inicio</a></li>
-            <li class="link_li"><a class="link_op" >Acerca de</a></li>
-            <li class="link_li"><a class="link_op" href="/html/convertidor.html">Servicios</a></li>
-            <li class="link_li"><a class="link_op" >Contacto</a></li>
+            <li class="link_li" id="selected"><a class="link_op"></a></li>
+            <li class="link_li"><a class="link_op">Acerca de</a></li>
+            <li class="link_li"><a class="link_op">Servicios</a>
+              <ul>
+                <li><a href="/html/convertidor.html">Convertidor word a pdf</a></li>
+                <li><a>Sistemas personalizados</a></li>
+              </ul>
+            </li>
+            <li class="link_li"><a class="link_op">Contacto</a></li>
           </ul>
         </nav>
-    </div>
-    <div class ="Description_page">
-      <h1>Bienvenido a <em>"Nombre de paguina"</em></h1>
-    </div>
-    <div class="Description_tools">
-      <h2>Nuestras herramientas</h2>  
-    </div>
+  </header>
+      <main>
+        <article>
+          <h2>Paguina de Inicio</h2>
+          <p>Lorem, ipsum dolor sit amet 
+            consectetur adipisicing elit. Laboriosam explicabo 
+            molestiae voluptatum temporibus fuga, quas odio, quos 
+            quae ratione maiores dolor libero doloremque velit repellendus non,
+             culpa itaque ducimus voluptatem.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Iusto voluptatibus autem perspiciatis non molestiae cumque, ut cum excepturi 
+            commodi nostrum nam sit architecto velit possimus? Ab iusto dolorum sed laboriosam.</p>
+        </article>
+      </main>
 </body>
-<script src="/js/"></script>
+  
 </html>

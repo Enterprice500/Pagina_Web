@@ -1,73 +1,239 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-  
-li a {
-    color: #fff;
-    padding: 15px 15px;
-    display: block;
-    margin-left: 20px;
-    text-decoration: none;
-}
-  
-.link_ul{
-  display: flex;
-  list-style: none;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-.link_li{
-  display: inline-block;
+
+.navegacion {
+  width: 100%;
+  height: 80px;
+  background: #1d1b1b;
+  padding: 0px 20px;
+}
+
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+
+}
+
+nav {
+  height: 100%;
+}
+
+nav>ul {
+  height: 100%;
+  display: flex;
+}
+
+nav ul li {
+  height: 100%;
   list-style: none;
-}
-.link_op{
-  text-decoration: none;
-  color: #fff;
-  padding: 15px 15px;
-  margin-left: 20px;
   position: relative;
+}
+
+nav>ul>li:first-child>a {
+  background-image: url(../css/img/cadena-de-bloques.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 40px;
+
+}
+nav>ul>li:first-child:hover >a {
+  background-image: url(../css/img/cadena-de-bloques.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#selected{
+  transform: scale(1.1);
+  background-color: #3f3737;
+  box-shadow: 0px 0px 10px 0px(0,0,0,5) ;
+
+}
+nav>ul>li>a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 14px;
+  transition: all 300ms ease;
+  color: white;
   cursor: pointer;
 }
-.link_op:after{
-    content: "";
-    width: 0px;
-    height: 4px;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transition: all .5s;
-    will-change: width;
+
+nav>ul>li>a:hover {
+  transform: scale(1.1);
+  background-color: #3f3737;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+  color: white;
 }
-.link_op:hover:after{
-    width: 100%;
-    right: 0;
+
+.link_op:after {
+  content: "";
+  width: 0px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all .6s;
+  will-change: width;
 }
-.Description_page{
-  margin-left: 550px ;
+
+.link_op:hover:after {
+  width: 100%;
+  right: 0;
 }
-.Description_tools{
-  margin-left: 680px;
+
+.logo {
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
-.navegacion{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* ---- submenu ---- */
+nav ul li ul {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #1d1b1b;
+  position: absolute;
+  top: 90px;
+  left: -5px;
+  padding: 14px 0px;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+  z-index: 10;
+  color: #fff;
+  transition: all 300ms ease;
+
+}
+
+nav ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 70px;
+}
+
+nav ul li ul:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #1d1b1b;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+nav ul li ul a {
+  display: block;
+  padding: 6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+  text-decoration: none;
+  color: white;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+nav ul li ul a:hover {
+  background: #2e2929;
+  padding-left: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+  font-size: 15px;
+  color: white;
+
+}
+/*Articulos*/
+main{
+  background: #f0f0f0;
+  padding: 40px 20px;
+}
+article{
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 40px;
+}
+article > p{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* Elementos responsivos*/
+.icon__menu{
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+#check__menu{
+  display: none;
+}
+#label__check{
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+@media screen and (max-width: 720px)  {
+  nav > ul {
+    flex-direction: column;
+    position:fixed;
     background-color: #1d1b1b;
-    color: #fff;
-    padding: 10px;
-}
-.logo{
-    margin-left: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius:50%;
+    left:0;
+    top: 80px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: index 100;
+    opacity: 0;
+    visibility: hidden;
+   }
+   nav > ul > li > a:hover{
+    transform: scale(1);
+   }
+   nav ul li ul{
+    transform: scale(1);
+   }
+   nav ul li ul{
+    left: 90px;
+   }
+   nav > ul > li:hover ul{
+    top:50px;
+   }
+
+   #selected{
+    transform: scale(1);
+   }
+   #label__check{
+    display: block;
+   }
+   .icon__menu{
+    display:flex;
+   }
+   #check__menu:checked ~ nav > ul{
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+   }
+
 }

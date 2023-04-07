@@ -7,7 +7,23 @@
     <title>Convertidor</title>
 </head>
 <body>
-    <h1>Sube tu archivo en Word!</h1>
     
+    <header>
+        <h1>Convertir</h1>
+        <h2>Word a Pdf</h2>
+        <h2>Pdf a Word</h2>
+    </header>
+    <main>
+        <form action="/action.php">
+            <fieldset>
+                <legend>Convertir</legend>
+                <label for="archivo">Selecciona tu archivo
+                    <input id="archivo" type="file" accept=".docx" required>
+                </label> 
+                <br/>
+                <button>Convertir</button>
+            </fieldset>            
+        </form>
+    </main>
 </body>
 </html>

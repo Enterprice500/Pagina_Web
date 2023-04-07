@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertidor</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/convertirdor.css">
+  <title>Convertidor</title>
 </head>
+
 <body>
-    
-    <header>
-        <h1>Convertir</h1>
-        <h2>Word a Pdf</h2>
-        <h2>Pdf a Word</h2>
-    </header>
+  <header>
+    <div class="navegacion">
+      <div class="menu">
+        <input type="checkbox" id="check__menu">
+        <label id="label__check" for="check__menu">
+          <i class="fas fa-bars icon__menu"></i>
+        </label>
+        <nav>
+          <ul class="link_ul">
+            <li class="link_li" id="selected"><a class="link_op" href="/html/index.html"></a></li>
+            <li class="link_li"><a class="link_op">Convertidores</a></li>
+            <li class="link_li"><a class="link_op">Servicios</a>
+              <ul>
+                <li><a href="/html/convertidor.html">Convertidor de archivos</a></li>
+                <li><a >Sistemas personalizados</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+  </header>
+
+  <div class="conv_apt">
+    <button id="opt1">Word a PDf</button>
+    <button id="opt2">PDF a Word</button>
+  </div>
     <main>
-        <form action="/action.php">
-            <fieldset>
-                <legend>Convertir</legend>
-                <label for="archivo">Selecciona tu archivo
-                    <input id="archivo" type="file" accept=".docx" required>
-                </label> 
-                <br/>
-                <button>Convertir</button>
-            </fieldset>            
-        </form>
-    </main>
+    <form>
+      <fieldset>
+        <legend>Convertir</legend>
+        <label for="archivo">Selecciona tu archivo
+          <input id="archivo" type="file" accept=".docx" required>
+        </label>
+        <br />
+        <button>Convertir</button>
+      </fieldset>
+    </form>
+  </main>
+
 </body>
 </html>

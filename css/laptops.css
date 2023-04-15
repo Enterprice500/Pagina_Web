@@ -252,16 +252,14 @@ article>p {
         opacity: 1;
     }
     }
-.conv_apt > button{
-   border-radius: 17px;
-   padding: 15px 15px;
-   font-size: 18px;
-   color: white;
-   background-color: #1d1b1b;
-   margin: 12px;
-}
-.conv_apt{
-    background-color: aqua;
-  padding-left:90px;
-  padding-top: 10px;
- }
+    .Container{
+        border: 1px solid black;
+        display: flex;
+        
+    }
+
+    .Container1{
+        border: 1px solid black;
+        
+        
+    }
